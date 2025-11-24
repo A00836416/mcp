@@ -1,0 +1,10 @@
+mcp-use
+mcp
+fastmcp
+
+langchain-openai
+
+python-dotenv
+psycopg2-binary
+httpx
+slack-sdk

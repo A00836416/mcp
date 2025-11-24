@@ -1,0 +1,46 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.swp
+*.swo
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# --- Environment files ---
+# No subir tokens, claves ni configuraciones sensibles
+.env
+*.env
+
+# --- Logs ---
+*.log
+
+# --- OS ---
+.DS_Store
+
+# --- IDEs ---
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# --- Docker ---
+# Ignorar archivos que no quieras subir por error
+*.pid
+*.tar
+
+# --- MCP generated cache ---
+/.cache/
+/tmp/
+
+# --- Byte-compiled or temporary files ---
+*.bak
+*.tmp
