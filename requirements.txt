@@ -4,7 +4,12 @@ fastmcp
 
 langchain-openai
 
+# Servers
 python-dotenv
 psycopg2-binary
 httpx
 slack-sdk
+
+# API Backend
+fastapi
+uvicorn[standard]

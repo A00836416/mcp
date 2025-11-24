@@ -5,13 +5,22 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y curl git build-essential
+# Dependencias del sistema necesarias
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    git \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
 
+# Actualiza pip
 RUN pip install --upgrade pip setuptools wheel
 
+# Instala requirements
 COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
+# Copia el proyecto completo
 COPY . .
 
-CMD ["python", "agent.py"]
+# Ejecuta FastAPI (NO agent.py)
+CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8000"]
