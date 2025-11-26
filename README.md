@@ -37,7 +37,7 @@ SUPABASE_DB_URL=postgresql://user:pass@host:5432/db
 3. Ejecuta:
 
 ```
-docker compose down
+docker compose down --remove-orphans
 docker compose build --no-cache
 docker compose up
 

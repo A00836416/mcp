@@ -13,3 +13,5 @@ slack-sdk
 # API Backend
 fastapi
 uvicorn[standard]
+sse-starlette
+websockets
